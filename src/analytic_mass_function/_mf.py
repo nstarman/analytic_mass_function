@@ -15,7 +15,7 @@ import sympy as sp
 from scipy import stats
 
 
-class MassFunctionDistribution(stats.rv_continuous):
+class MassFunctionDistribution(stats.rv_continuous):  # type: ignore[misc]
     """Mass function distribution.
 
     Parameters
@@ -23,7 +23,7 @@ class MassFunctionDistribution(stats.rv_continuous):
     pdf : sympy.Expr
         The unnormalized PDF of the mass function.
         This must be a function of the symbol `m`, and optionally `mmin` and
-        `mmax`. All symbols must be postive.
+        `mmax`. All symbols must be positive.
 
     mmin, mmax : float
         The minimum / maximum mass.
