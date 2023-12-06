@@ -103,6 +103,13 @@ module = "analytic_mass_function.*"
 disallow_untyped_defs = true
 disallow_incomplete_defs = true
 
+[[tool.mypy.overrides]]
+module = [
+  "scipy.*",
+  "sympy.*"
+]
+ignore_missing_imports = true
+
 
 [tool.ruff]
 src = ["src"]
